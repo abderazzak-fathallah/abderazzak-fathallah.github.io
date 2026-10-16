@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Portfolio professionnel d'Abderrazak Fathallah : ingénierie industrielle, amélioration continue, digitalisation et Industrie 4.0.">
+<title>Abderrazak Fathallah | Portfolio industriel</title>
+
+<style>
+:root {
+    --blue: #155eef;
+    --dark: #101828;
+    --gray: #667085;
+    --bg: #f8fafc;
+    --white: #ffffff;
+    --border: #e4e7ec;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--bg);
+    color: var(--dark);
+    line-height: 1.7;
+}
+
+a {
+    text-decoration: none;
+}
+
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: rgba(255,255,255,.95);
+    border-bottom: 1px solid var(--border);
+    padding: 16px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo {
+    font-weight: 800;
+    color: var(--blue);
+    font-size: 19px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 22px;
+    flex-wrap: wrap;
+}
+
+.nav-links a {
+    color: var(--dark);
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.nav-links a:hover {
+    color: var(--blue);
+}
+
+.hero {
+    padding: 100px 7% 85px;
+    background: linear-gradient(135deg, #101828, #173b70);
+    color: white;
+}
+
+.hero-content {
+    max-width: 1000px;
+    margin: auto;
+}
+
+.eyebrow {
+    color: #84adff;
+    font-weight: 700;
+    letter-spacing: 2px;
+    font-size: 13px;
+    text-transform: uppercase;
+}
+
+h1 {
+    font-size: clamp(38px, 6vw, 66px);
+    line-height: 1.15;
+    margin: 18px 0;
+    letter-spacing: -2px;
+}
+
+.hero h2 {
+    font-size: clamp(18px, 3vw, 25px);
+    font-weight: 500;
+    color: #d0d5dd;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    max-width: 720px;
+    color: #d0d5dd;
+    font-size: 16px;
+}
+
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 30px;
+}
+
+.button {
+    display: inline-block;
+    padding: 12px 20px;
+    border-radius: 8px;
+    background: var(--blue);
+    color: white;
+    font-weight: 700;
+    transition: .2s;
+}
+
+.button:hover {
+    transform: translateY(-2px);
+    opacity: .9;
+}
+
+.button-outline {
+    background: transparent;
+    border: 1px solid #98a2b3;
+}
+
+.container {
+    max-width: 1150px;
+    margin: auto;
+    padding: 65px 25px;
+}
+
+.section-label {
+    color: var(--blue);
+    font-weight: 800;
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.section-title {
+    font-size: 32px;
+    margin: 8px 0 12px;
+    letter-spacing: -1px;
+}
+
+.section-intro {
+    color: var(--gray);
+    max-width: 750px;
+    margin-bottom: 30px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.card {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 26px;
+    box-shadow: 0 4px 15px rgba(16,24,40,.035);
+    transition: .2s;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 28px rgba(16,24,40,.08);
+}
+
+.card-top {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    align-items: flex-start;
+    margin-bottom: 12px;
+}
+
+.icon {
+    font-size: 28px;
+}
+
+.date {
+    color: var(--gray);
+    font-size: 12px;
+    text-align: right;
+}
+
+.card h3 {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.card h4 {
+    color: var(--blue);
+    font-size: 14px;
+    margin-bottom: 12px;
+}
+
+.card p, .card li {
+    color: var(--gray);
+    font-size: 14px;
+}
+
+.card ul {
+    padding-left: 20px;
+    margin: 12px 0;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+    margin-top: 18px;
+}
+
+.tag {
+    background: #eff4ff;
+    color: #3538cd;
+    border-radius: 20px;
+    padding: 5px 10px;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.metric {
+    color: var(--blue);
+    font-size: 23px;
+    font-weight: 800;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.skill-box {
+    background: white;
+    padding: 22px;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+}
+
+.skill-box h3 {
+    margin-bottom: 12px;
+    font-size: 17px;
+}
+
+.skill-box p {
+    color: var(--gray);
+    font-size: 14px;
+}
+
+.about-box {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 30px;
+    color: var(--gray);
+}
+
+.contact {
+    background: #101828;
+    color: white;
+    text-align: center;
+    padding: 65px 20px;
+}
+
+.contact p {
+    color: #d0d5dd;
+    margin: 12px 0;
+}
+
+.contact a:not(.button) {
+    color: #84adff;
+}
+
+footer {
+    background: #101828;
+    color: #98a2b3;
+    text-align: center;
+    border-top: 1px solid #344054;
+    padding: 20px;
+    font-size: 12px;
+}
+
+@media (max-width: 760px) {
+    nav {
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 15px 5%;
+    }
+
+    .nav-links {
+        gap: 12px;
+    }
+
+    .hero {
+        padding: 70px 6%;
+    }
+
+    .grid, .skills-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .container {
+        padding: 48px 18px;
+    }
+
+    .section-title {
+        font-size: 27px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+    <a class="logo" href="#accueil">AF. PORTFOLIO</a>
+    <div class="nav-links">
+        <a href="#profil">Profil</a>
+        <a href="#experiences">Expériences</a>
+        <a href="#projets">Projets</a>
+        <a href="#competences">Compétences</a>
+        <a href="#contact">Contact</a>
+    </div>
+</nav>
+
+<header class="hero" id="accueil">
+    <div class="hero-content">
+        <div class="eyebrow">Portfolio professionnel · 2026</div>
+
+        <h1>Abderrazak<br>Fathallah.</h1>
+
+        <h2>Ingénierie industrielle · Amélioration continue · Industrie 4.0</h2>
+
+        <p>
+            Étudiant en Technologies pour l’Industrie du Futur 4.0 à Arts et Métiers
+            Rabat. Je m’intéresse à l’optimisation des processus industriels,
+            à la digitalisation et au développement de solutions numériques
+            permettant d’améliorer la performance opérationnelle.
+        </p>
+
+        <div class="buttons">
+            <a class="button" href="#projets">Découvrir mes projets ↗</a>
+            <a class="button button-outline"
+               href="https://www.linkedin.com/"
+               target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a class="button button-outline" href="#contact">Me contacter</a>
+        </div>
+    </div>
+</header>
+
+<main>
+
+<section class="container" id="profil">
+    <div class="section-label">01 / Profil</div>
+    <h2 class="section-title">À propos de moi</h2>
+
+    <div class="about-box">
+        Mon parcours associe l’électromécanique, l’amélioration continue et
+        la digitalisation des processus industriels. À travers mes stages
+        et projets, je développe des outils d’automatisation, analyse les
+        performances de production et conçois des solutions intégrant les
+        technologies numériques. Je privilégie les applications concrètes
+        qui répondent aux besoins du terrain.
+    </div>
+</section>
+
+<section class="container" id="experiences">
+    <div class="section-label">02 / Expérience</div>
+    <h2 class="section-title">Expériences professionnelles</h2>
+    <p class="section-intro">
+        Des expériences orientées vers la performance industrielle,
+        la résolution de problèmes et l’automatisation.
+    </p>
+
+    <div class="grid">
+
+        <article class="card">
+            <div class="card-top">
+                <span class="icon">🏭</span>
+                <span class="date">Sept. 2026 – Avr. 2027</span>
+            </div>
+
+            <h3>Safran Nacelles</h3>
+            <h4>Digitalisation des inspections industrielles</h4>
+
+            <ul>
+                <li>Développement d’une application Excel VBA accessible depuis les tablettes des inspecteurs.</li>
+                <li>Automatisation de l’intégration des valeurs d’inspection dans les feuilles de suivi individuelles.</li>
+                <li>Développement de tableaux de bord et automatisation de la génération et de l’impression des feuilles renseignées.</li>
+            </ul>
+
+            <div class="tags">
+                <span class="tag">Excel VBA</span>
+                <span class="tag">Digitalisation</span>
+                <span class="tag">Tableaux de bord</span>
+            </div>
+        </article>
+
+        <article class="card">
+            <div class="card-top">
+                <span class="icon">⚙️</span>
+                <span class="date">Juin – Août 2026</span>
+            </div>
+
+            <h3>LEONI Bouskoura</h3>
+            <h4>Amélioration continue · Ligne P24</h4>
+
+            <ul>
+                <li>Analyse des performances et rééquilibrage de 27 postes de travail.</li>
+                <li>Application de la démarche DMAIC et des outils Lean Six Sigma.</li>
+                <li>Analyse des causes racines et déploiement d’actions correctives.</li>
+            </ul>
+
+            <div class="metric">72 % → 85 %</div>
+            <p>Progression de l’efficience de la ligne, selon le rapport de stage.</p>
+
+            <div class="tags">
+                <span class="tag">DMAIC</span>
+                <span class="tag">VSM</span>
+                <span class="tag">Pareto</span>
+                <span class="tag">Ishikawa</span>
+            </div>
+        </article>
+
+        <article class="card">
+            <div class="card-top">
+                <span class="icon">📊</span>
+                <span class="date">Juin – Août 2026</span>
+            </div>
+
+            <h3>LEONI · Suivi de la polyvalence</h3>
+            <h4>Application Excel/VBA</h4>
+
+            <ul>
+                <li>Centralisation du suivi de la polyvalence des opérateurs.</li>
+                <li>Automatisation des calculs, objectifs et extractions par segment, famille, équipe et ligne.</li>
+                <li>Traçabilité des modifications pour fiabiliser les données.</li>
+            </ul>
+
+            <div class="tags">
+                <span class="tag">Excel VBA</span>
+                <span class="tag">Automatisation</span>
+                <span class="tag">Suivi industriel</span>
+            </div>
+        </article>
+
+        <article class="card">
+            <div class="card-top">
+                <span class="icon">📅</span>
+                <span class="date">Juin – Août 2026</span>
+            </div>
+
+            <h3>LEONI · Suivi des absences</h3>
+            <h4>Digitalisation RH-production</h4>
+
+            <ul>
+                <li>Création d’un calendrier de présence par opérateur.</li>
+                <li>Suivi des délais des entretiens de retour après absence.</li>
+                <li>Extraction de rapports mensuels par périmètre.</li>
+            </ul>
+
+            <div class="tags">
+                <span class="tag">Excel VBA</span>
+                <span class="tag">Rapports</span>
+                <span class="tag">Digitalisation</span>
+            </div>
+        </article>
+
+    </div>
+</section>
+
+<section class="container" id="projets">
+    <div class="section-label">03 / Réalisations</div>
+    <h2 class="section-title">Projets académiques</h2>
+    <p class="section-intro">
+        Conception, programmation, supervision et intégration de solutions
+        techniques dans le cadre du Bachelor Technologies pour l’Industrie du Futur.
+    </p>
+
+    <div class="grid">
+
+        <article class="card">
+            <div class="card-top">
+                <span class="icon">🌐</span>
+                <span class="date">Déc. 2025 · 1er prix</span>
+            </div>
+
+            <h3>Smart Classroom & SCADA</h3>
+            <h4>IoT · Supervision industrielle</h4>
+
+            <ul>
+                <li>Intégration de capteurs de température, humidité, luminosité, CO₂ et présence.</li>
+                <li>Architecture de communication capteurs → MQTT → Node-RED → Dashboard.</li>
+                <li>Supervision en temps réel, historique, alertes et export CSV.</li>
+            </ul>
+
+            <div class="tags">
+                <span class="tag">IoT</span>
+                <span class="tag">MQTT</span>
+                <span class="tag">Node-RED</span>
+                <span class="tag">SCADA</span>
+            </div>
+        </article>
+
+        <article class="card">
+            <div class="card-top">
+                <span class="icon">🤖</span>
+                <span class="date">Janv. – Mai 2026</span>
+            </div>
+
+            <h3>Bras Pro Max</h3>
+            <h4>Conception et intégration robotique</h4>
+
+            <ul>
+                <li>Conception mécanique 3D du bras robotisé sous SolidWorks.</li>
+                <li>Intégration d’un ESP32 et de servomoteurs.</li>
+                <li>Programmation en C++ et contrôle des articulations via Blynk.</li>
+            </ul>
+
+            <div class="tags">
+                <span class="tag">SolidWorks</span>
+                <span class="tag">ESP32</span>
+                <span class="tag">C++</span>
+                <span class="tag">Blynk</span>
+            </div>
+        </article>
+
+        <article class="card">
+            <div class="card-top">
+                <span class="icon">🚚</span>
+                <span class="date">Fév. 2026 · 1er prix</span>
+            </div>
+
+            <h3>Robot autonome de transport de granulés</h3>
+            <h4>Automatisation · Systèmes autonomes</h4>
+
+            <ul>
+                <li>Conception d’un robot mobile de transport, déchargement et rechargement.</li>
+                <li>Intégration de capteurs pour le suivi de ligne et la détection d’obstacles.</li>
+                <li>Programmation du comportement séquentiel et des déplacements automatisés.</li>
+            </ul>
+
+            <div class="tags">
+                <span class="tag">Robotique</span>
+                <span class="tag">Capteurs</span>
+                <span class="tag">Automatisation</span>
+            </div>
+        </article>
+
+        <article class="card">
+            <div class="card-top">
+                <span class="icon">🌬️</span>
+                <span class="date">Déc. 2025 – Fév. 2026</span>
+            </div>
+
+            <h3>CityWind</h3>
+            <h4>Conception mécanique et énergétique</h4>
+
+            <ul>
+                <li>Analyse fonctionnelle et étude du potentiel éolien au Maroc.</li>
+                <li>Dimensionnement du rotor, de la transmission, des engrenages et des roulements.</li>
+                <li>Modélisation 3D et vérification de la compatibilité mécanique.</li>
+            </ul>
+
+            <div class="tags">
+                <span class="tag">CAO</span>
+                <span class="tag">Dimensionnement</span>
+                <span class="tag">Énergie</span>
+            </div>
+        </article>
+
+    </div>
+</section>
+
+<section class="container" id="competences">
+    <div class="section-label">04 / Expertise</div>
+    <h2 class="section-title">Compétences techniques</h2>
+
+    <div class="skills-grid">
+        <div class="skill-box">
+            <h3>📈 Amélioration continue</h3>
+            <p>Lean Six Sigma, DMAIC, VSM, Pareto, Ishikawa, 5 Pourquoi, analyse des causes racines.</p>
+        </div>
+
+        <div class="skill-box">
+            <h3>💻 Digitalisation</h3>
+            <p>Excel avancé, VBA, automatisation des tâches, tableaux de bord, Python.</p>
+        </div>
+
+        <div class="skill-box">
+            <h3>🌐 IoT & Industrie 4.0</h3>
+            <p>Capteurs, MQTT, Node-RED, supervision, Arduino IDE, systèmes connectés.</p>
+        </div>
+
+        <div class="skill-box">
+            <h3>⚡ Automatisation</h3>
+            <p>GRAFCET, TIA Portal, STEP 7, logique de commande, systèmes automatisés.</p>
+        </div>
+
+        <div class="skill-box">
+            <h3>🛠️ Conception</h3>
+            <p>SolidWorks, CATIA, modélisation 3D, dimensionnement mécanique, Fritzing.</p>
+        </div>
+
+        <div class="skill-box">
+            <h3>🗣️ Langues</h3>
+            <p>Arabe · Français B2 (TCF) · Anglais : niveau à préciser.</p>
+        </div>
+    </div>
+</section>
+
+<section class="container" id="formation">
+    <div class="section-label">05 / Parcours</div>
+    <h2 class="section-title">Formation & certifications</h2>
+
+    <div class="grid">
+        <article class="card">
+            <h3>Arts et Métiers · Campus de Rabat</h3>
+            <h4>Bachelor/Licence – Technologies pour l’Industrie du Futur 4.0</h4>
+            <p>Formation orientée vers les technologies industrielles, l’automatisation et la digitalisation.</p>
+            <div class="tags"><span class="tag">2025–2027</span></div>
+        </article>
+
+        <article class="card">
+            <h3>BTS · Électromécanique</h3>
+            <h4>Électromécanique et systèmes automatisés</h4>
+            <p>Formation technique en maintenance, électromécanique et automatisation industrielle.</p>
+            <div class="tags"><span class="tag">2023–2025</span></div>
+        </article>
+
+        <article class="card">
+            <h3>Certifications</h3>
+            <ul>
+                <li>Python Programming Basics — Huawei</li>
+                <li>Business Analysis & Process Management</li>
+                <li>HiveMQ Certified MQTT Associate</li>
+                <li>TCF — Français B2</li>
+            </ul>
+        </article>
+
+        <article class="card">
+            <h3>Activités</h3>
+            <ul>
+                <li>Football — équipe universitaire UM6P Rabat.</li>
+                <li>Participation à des projets robotiques et technologiques.</li>
+            </ul>
+        </article>
+    </div>
+</section>
+
+</main>
+
+<section class="contact" id="contact">
+    <div class="section-label">06 / Contact</div>
+    <h2 class="section-title">Construisons des solutions industrielles performantes.</h2>
+
+    <p>Pour échanger sur mes projets, mon parcours ou une opportunité professionnelle :</p>
+
+    <p>
+        <a href="mailto:abderazzakfathallah@gmail.com">
+            abderazzakfathallah@gmail.com
+        </a>
+    </p>
+
+    <div class="buttons" style="justify-content:center">
+        <a class="button"
+           href="https://www.linkedin.com/"
+           target="_blank" rel="noopener noreferrer">Mon LinkedIn</a>
+        <a class="button button-outline"
+           href="mailto:abderazzakfathallah@gmail.com">Envoyer un e-mail</a>
+    </div>
+</section>
+
+<footer>
+    © 2026 Abderrazak Fathallah · Portfolio professionnel
+</footer>
+
+</body>
+</html>
