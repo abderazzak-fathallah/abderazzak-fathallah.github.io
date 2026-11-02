@@ -1,0 +1,13 @@
+<!doctype html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="assets/css/style.css">
+<title>Projet | Abderazzak Fathallah</title><meta name="description" content="Détail d'un projet académique d'Abderazzak Fathallah.">
+</head><body>
+<header class="top"><div class="wrap nav"><a class="brand" href="index.html">Abderazzak Fathallah</a><button class="burger" aria-label="Ouvrir le menu" aria-expanded="false" data-i="menu"></button><ul><li><a class="l" href="index.html#profil">Profil</a></li><li><a class="l" href="index.html#experiences">Expériences</a></li><li><a class="l" href="index.html#projets">Projets</a></li><li><a class="l" href="documents.html">Documents</a></li><li><a class="l" href="index.html#contact">Contact</a></li></ul></div></header>
+<div class="phead"><div class="wrap"><p><a href="index.html#projets" style="color:#9FB6EA">Retour aux projets</a></p><h1 id="t">Projet</h1><p id="s"></p></div></div>
+<main><section><div class="wrap" id="c" style="max-width:760px"></div></section></main>
+<footer>© 2026 Abderazzak Fathallah · Portfolio professionnel</footer><script src="assets/js/main.js"></script><script src="assets/js/projets-data.js"></script>
+<script>
+(function(){const k=new URLSearchParams(location.search).get('p'),p=PROJETS[k],c=document.getElementById('c');
+if(!p){document.getElementById('t').textContent='Projet introuvable';c.innerHTML='<p>Ce projet n\'existe pas. <a href="index.html#projets">Voir tous les projets</a>.</p>';return}
+document.title=p.titre+' | Abderazzak Fathallah';document.getElementById('t').textContent=p.titre;document.getElementById('s').textContent=p.sous+' · '+p.periode;
+c.innerHTML=(p.prix?'<span class="prize">'+esc(p.prix)+'</span>':'')+'<p class="lead">'+esc(p.desc)+'</p><h2>Réalisations</h2><ul>'+p.points.map(x=>'<li>'+esc(x)+'</li>').join('')+'</ul><ul class="tags">'+p.tech.map(x=>'<li>'+esc(x)+'</li>').join('')+'</ul><p style="margin-top:32px"><a class="btn" href="documents.html">Voir les documents</a></p>';})();
+</script></body></html>
