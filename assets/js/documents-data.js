@@ -80,7 +80,7 @@ const DOCUMENTS = [
         categorie: "Attestations",
         desc: "Attestation de stage effectué chez LEONI à Bouskoura.",
         format: "PDF",
-        fichier: "assets/documents/attestations/attestation stage leoni.pdf",
+        fichier: "assets/documents/attestations/attestation-leoni.pdf",
         publie: true
     },
 
